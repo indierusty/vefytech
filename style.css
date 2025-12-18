@@ -71,3 +71,16 @@ p {
 a {
     text-decoration: none;
 }
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    height: 40px;
+}
