@@ -1,12 +1,9 @@
 :root {
-    --color-primary: #2584ff;
-    --color-secondary: #00d9ff;
-    --color-accent: #ff3200;
-    --color-headings: #1b0760;
-    --color-body: #918ca4;
-    --color-body-darker: #5c5577;
-    --color-border: #ccc;
-    --border-radius: 30px;
+    --color-primary: #ff801a;
+    --color-text: #2c293e;
+    --color-text-ligth: #979494;
+    --color-bg: #fff9f4;
+    --border-radius: 12px;
 }
 
 *,
@@ -22,49 +19,19 @@ html {
 
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2.4rem;
-    color: var(--color-body);
+    background: var(--color-bg);
+    margin: 0;
 }
 
 h1,
 h2,
 h3 {
     color: var(--color-headings);
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-size: 7rem;
-}
-
-h2 {
-    font-size: 4rem;
-}
-
-h3 {
-    font-size: 3rem;
+    margin: 0;
 }
 
 p {
-    margin-top: 0;
-}
-
-@media screen and (min-width: 1024px) {
-    body {
-        font-size: 1.8rem;
-    }
-
-    h1 {
-        font-size: 8rem;
-    }
-
-    h2 {
-        font-size: 4rem;
-    }
-
-    h3 {
-        font-size: 2.4rem;
-    }
+    margin: 0;
 }
 
 /* Links */
@@ -74,13 +41,182 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
 }
 
 .nav {
     width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+}
+
+.list {
+    display: none;
+}
+
+.list a {
+    color: var(--color-text);
 }
 
 .logo {
-    height: 40px;
+    height: 32px;
+}
+
+@media screen and (min-width: 700px) {
+    .list {
+        display: flex;
+        flex-direction: row;
+        gap: 2.4rem;
+    }
+}
+
+/* Buttons */
+.btn {
+    border-radius: var(--border-radius);
+    border: none;
+    padding: 0 2.4rem;
+}
+
+.btn--lg {
+    height: 4rem;
+    font-size: 1.4rem;
+}
+
+.btn--primary {
+    background: var(--color-text);
+    color: white;
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+}
+
+/* Layout */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    max-width: 90rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.grid--2x1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.h3 {
+    font-size: 2.4rem;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-text-ligth);
+}
+
+.p1 {
+    font-size: 1.6rem;
+    color: var(--color-text-ligth);
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        padding: 0 5rem;
+    }
+}
+
+/* Intro Section */
+.intro-section {
+    margin-top: 5rem;
+}
+
+.intro-section .p2 {
+    margin-top: 2rem;
+}
+
+.intro-section .btns {
+    margin-top: 6rem;
+}
+
+/* Solutions Section */
+.solutions-section {
+    margin-top: 5rem;
+}
+
+.solutions-section ul {
+    margin-top: 5rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem;
+}
+
+.card .p1 {
+    margin-top: 2rem;
+}
+
+.card .link {
+    margin-top: 3rem;
+    color: var(--color-primary);
+}
+
+/*powered-by-section */
+.powered-by-section {
+    background-color: var(--color-text);
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.powered-by-section .h3 {
+    font-size: 1.4rem;
+}
+
+.powered-by-section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.powered-by-section img {
+    height: 44px;
 }
